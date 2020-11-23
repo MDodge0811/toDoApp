@@ -1,0 +1,29 @@
+User should input their reminder into the text box and hit ‘submit’,
+
+‘Submit’ stores their response in a JSON file.
+
+To get a JSON file, I need to store the input as a javascript object, then convert that object to JSON.
+
+JSON = [
+    user : {
+	reminders: [
+    {
+		reminder: “remind me of something”,
+		id: “isgoidafjk”
+		},
+  ]
+	cookie: “919827592”
+	}
+
+We will generate a cookie and store that in the JSON object as well. 
+
+Then the website will check the cookies of the user a populate the appropriate list of reminders. 
+
+Each time the user does anything, we need to make sure we operate on the correct list of to-do’s.
+
+reminder: 
+<div> 
+<textbox>"Reminder text"</textbox>
+<button> Check </button>
+<button> Remove </button>
+</div>
