@@ -2,9 +2,9 @@ const remindersList = document.getElementById('reminders-list');
 
 remindersList.addEventListener('click', (event) => {
 	if (event.target.matches('.delete')) {
-		event.target.parentNode.parentNode.remove();
+		event.target.closest('.single-reminder').remove();
 	} else if (event.target.matches('.complete')) {
-		event.target.parentNode.parentNode.classList.add('completed');
+		event.target.closest('.single-reminder').classList.add('completed');
 		event.target.remove();
 	}
 });
@@ -13,7 +13,7 @@ document.querySelector('#create').addEventListener('click', (event) => {
 	event.preventDefault();
 
 	const reminder = document.getElementById('reminder');
-	if (reminder.value == '') {
+	if (reminder.value.trim() === '') {
 		reminder.placeholder = 'Forget something?';
 	} else {
 		const node = document.createElement('div');
