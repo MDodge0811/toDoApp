@@ -18,12 +18,12 @@ document.querySelector('#create').addEventListener('click', (event) => {
 	} else {
 		const node = document.createElement('div');
 		node.classList.add('single-reminder');
-		node.innerHTML = `
-	<p>${reminder.value}</p>
-	<div>
-	<button class='complete btn fas fa-check'></button>
-	<button class='delete btn fas fa-trash-alt'></button>
-	</div>
+		node.innerHTML = /*html*/ `
+		<p>${reminder.value}</p>
+		<div>
+			<button class='complete btn fas fa-check'></button>
+			<button class='delete btn fas fa-trash-alt'></button>
+		</div>
 	`;
 
 		remindersList.appendChild(node);
